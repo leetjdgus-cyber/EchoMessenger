@@ -33,6 +33,7 @@
             listbox1 = new ListBox();
             button1 = new Button();
             lblcount = new Label();
+            buttonClear = new Button();
             SuspendLayout();
             // 
             // label1
@@ -60,6 +61,7 @@
             listbox1.Location = new Point(90, 100);
             listbox1.Name = "listbox1";
             listbox1.Size = new Size(622, 199);
+            listbox1.SelectionMode = SelectionMode.MultiExtended;
             listbox1.TabIndex = 2;
             listbox1.SelectedIndexChanged += listbox1_SelectedIndexChanged;
             // 
@@ -82,12 +84,37 @@
             lblcount.Size = new Size(0, 15);
             lblcount.TabIndex = 4;
             // 
+            // buttonClear
+            // 
+            buttonClear.Font = new Font("한컴 고딕", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            buttonClear.Location = new Point(482, 382);
+            buttonClear.Name = "buttonClear";
+            buttonClear.Size = new Size(90, 46);
+            buttonClear.TabIndex = 5;
+            buttonClear.Text = "기록 삭제";
+            buttonClear.UseVisualStyleBackColor = true;
+            buttonClear.Click += buttonClear_Click;
+            // 
+            // buttonDelete
+            // 
+            buttonDelete = new Button();
+            buttonDelete.Font = new Font("한컴 고딕", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            buttonDelete.Location = new Point(382, 382);
+            buttonDelete.Name = "buttonDelete";
+            buttonDelete.Size = new Size(90, 46);
+            buttonDelete.TabIndex = 6;
+            buttonDelete.Text = "삭제";
+            buttonDelete.UseVisualStyleBackColor = true;
+            buttonDelete.Click += buttonDelete_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(lblcount);
+            Controls.Add(buttonClear);
+            Controls.Add(buttonDelete);
             Controls.Add(button1);
             Controls.Add(listbox1);
             Controls.Add(textBox1);
@@ -105,5 +132,7 @@
         private ListBox listbox1;
         private Button button1;
         private Label lblcount;
+        private Button buttonClear;
+        private Button buttonDelete;
     }
 }
