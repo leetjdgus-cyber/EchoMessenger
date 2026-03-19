@@ -9,6 +9,7 @@ namespace EchoMessenger
         public Form1()
         {
             InitializeComponent();
+            this.AcceptButton = button1; // Enter가 눌리면 button1 클릭처럼 작동하도록 설정
         }
 
         
@@ -25,7 +26,12 @@ namespace EchoMessenger
             if (!string.IsNullOrEmpty(text))
             {
                 listbox1.Items.Add(text);
+                //입력창 초기화
                 textBox1.Clear();
+                // 입력창으로 포커스를 돌려 바로 입력할 수 있게 함
+                textBox1.Focus();
+                textBox1.SelectionStart = 0;
+                textBox1.SelectionLength = 0;
 
             }
         }
